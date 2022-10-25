@@ -16,20 +16,106 @@
   "contributes": {
     "commands": [
       {
+        "command": "extension.case-helper.camel",
+        "title": "Camel Case",
+        "description": "Case Helper: Change to Camel Case"
+      },
+      {
+        "command": "extension.case-helper.constant",
+        "title": "Constant Case",
+        "description": "Case Helper: Change to Constant Case"
+      },
+      {
+        "command": "extension.case-helper.dot",
+        "title": "Dot Case",
+        "description": "Case Helper: Change to Dot Case"
+      },
+      {
+        "command": "extension.case-helper.kebab",
+        "title": "Kebab Case",
+        "description": "Case Helper: Change to Kebab Case"
+      },
+      {
         "command": "extension.case-helper.lower",
-        "title": "Lower",
-        "description": "Case Helper Lower"
+        "title": "Lower Case",
+        "description": "Case Helper: Change to Lower Case"
+      },
+      {
+        "command": "extension.case-helper.no",
+        "title": "No Case",
+        "description": "Case Helper: Change to No Case"
+      },
+      {
+        "command": "extension.case-helper.pascal",
+        "title": "Pascal Case",
+        "description": "Case Helper: Change to Pascal Case"
+      },
+      {
+        "command": "extension.case-helper.path",
+        "title": "Path Case",
+        "description": "Case Helper: Change to Path Case"
+      },
+      {
+        "command": "extension.case-helper.snake",
+        "title": "Snake Case",
+        "description": "Case Helper: Change to Snake Case"
       },
       {
         "command": "extension.case-helper.upper",
-        "title": "Upper",
-        "description": "Case Helper Upper"
+        "title": "Upper Case",
+        "description": "Case Helper: Change to Upper Case"
+      }
+    ],
+    "submenus": [
+      {
+        "id": "case-helper.menus",
+        "label": "Case Helper"
       }
     ],
     "menus": {
-      "editor/context": [
+      "case-helper.menus": [
+        {
+          "command": "extension.case-helper.camel",
+          "group": "1_modification",
+          "when": "editorHasSelection"
+        },
+        {
+          "command": "extension.case-helper.constant",
+          "group": "1_modification",
+          "when": "editorHasSelection"
+        },
+        {
+          "command": "extension.case-helper.dot",
+          "group": "1_modification",
+          "when": "editorHasSelection"
+        },
+        {
+          "command": "extension.case-helper.kebab",
+          "group": "1_modification",
+          "when": "editorHasSelection"
+        },
         {
           "command": "extension.case-helper.lower",
+          "group": "1_modification",
+          "when": "editorHasSelection"
+        },
+        {
+          "command": "extension.case-helper.no",
+          "group": "1_modification",
+          "when": "editorHasSelection"
+        },
+        {
+          "command": "extension.case-helper.pascal",
+          "group": "1_modification",
+          "when": "editorHasSelection"
+        },
+        {
+          "command": "extension.case-helper.path",
+          "group": "1_modification",
+          "when": "editorHasSelection"
+        },
+        {
+          "command": "extension.case-helper.snake",
           "group": "1_modification",
           "when": "editorHasSelection"
         },
@@ -37,6 +123,13 @@
           "command": "extension.case-helper.upper",
           "group": "1_modification",
           "when": "editorHasSelection"
+        }
+      ],
+      "editor/context": [
+        {
+          "submenu": "case-helper.menus",
+          "when": "editorHasSelection",
+          "group": "2_case_helper"
         }
       ]
     }
@@ -63,6 +156,8 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "change-case": "^4.1.2"
+    "change-case": "^4.1.2",
+    "lower-case": "^2.0.2",
+    "upper-case": "^2.0.2"
   }
 }

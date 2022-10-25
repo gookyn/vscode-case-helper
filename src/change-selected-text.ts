@@ -1,8 +1,10 @@
 import * as vscode from 'vscode';
+import type { TextEditor } from 'vscode';
+import { COMMANDS } from './commands';
 
-export const changeCase = (type) => {
+export const changeSelectedText = (type: string) => {
   // The currently active editor
-  const editor = vscode.window.activeTextEditor || {};
+  const editor = vscode.window.activeTextEditor || ({} as TextEditor);
   const { document, selection, selections } = editor;
 
   // Get the selected text range
@@ -13,20 +15,15 @@ export const changeCase = (type) => {
   const selectedText = document.getText(range);
 
   // Change case according to the command type
-  let changedText = '';
-  switch(type) {
-    case 'lower':
-      changedText = selectedText.toLowerCase();
-      break;
-    case 'upper':
-      changedText = selectedText.toUpperCase();
-      break;
-    default:
-      break;
+  let changedText = selectedText;
+  const command =
+    COMMANDS.find((item) => item.type === type) || ({} as { fn: Function });
+  if (command.fn && typeof command.fn === 'function') {
+    changedText = command.fn(selectedText);
   }
 
   // Replace the text
   editor.edit((editBuilder) => {
     editBuilder.replace(range, changedText);
   });
-}
+};

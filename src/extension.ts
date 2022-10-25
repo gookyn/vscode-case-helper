@@ -1,15 +1,15 @@
 import * as vscode from 'vscode';
-import { changeCase } from './change-case';
-import { commandType } from './constants';
+import { COMMANDS } from './commands';
+import { changeSelectedText } from './change-selected-text';
 
 // activate extension
 export function activate(context: vscode.ExtensionContext) {
   // register commands
-  commandType.forEach(item => {
+  COMMANDS.forEach((item) => {
     vscode.commands.registerCommand(item.command, () => {
-      changeCase(item.type);
+      changeSelectedText(item.type);
     });
-  })
+  });
 }
 
 // deactivate extension
