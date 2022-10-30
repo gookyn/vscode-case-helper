@@ -2,7 +2,7 @@
   "name": "case-helper",
   "displayName": "Case Helper",
   "description": "Helper to easily change case for the Visual Studio Code editor.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "gookyn",
   "categories": [
     "Other"
