@@ -1,14 +1,20 @@
 {
   "name": "case-helper",
   "displayName": "Case Helper",
-  "description": "",
+  "description": "Helper to easily change case for the Visual Studio Code editor.",
   "version": "0.1.0",
-  "engines": {
-    "vscode": "^1.71.0"
-  },
+  "publisher": "gookyn",
   "categories": [
     "Other"
   ],
+  "keywords": [
+    "Case",
+    "Change Case"
+  ],
+  "icon": "./images/icon.png",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
   "activationEvents": [
     "onStartupFinished"
   ],
@@ -159,5 +165,10 @@
     "change-case": "^4.1.2",
     "lower-case": "^2.0.2",
     "upper-case": "^2.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gookyn/vscode-case-helper.git"
+  },
+  "homepage": "https://github.com/gookyn/vscode-case-helper/blob/master/README.md"
 }
