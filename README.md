@@ -1,6 +1,8 @@
 # VSCode Case Helper
 
-Helper to easily change case for the Visual Studio Code editor. 🚀
+Helper to easily change case for the Visual Studio Code editor！ 🚀 🚀 🚀
+
+## Show 🎭
 
 <img src="./images/intro.gif">
 
@@ -16,8 +18,9 @@ ext install case-helper
 
 ## Usage 🪄
 
-- 1. Select the text in the VSCode editor
-- 2. Right-click and select the format to be changed through the Case Helper menu
+1. Select the text in the VSCode editor
+
+2. Right-click and select the format to be changed through the Case Helper menu
 
 <img src="./images/cases.png">
 
